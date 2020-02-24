@@ -1,3 +1,10 @@
+#You need WebEx Teams account for this lab. if you dont have an account it already, signup using below link -
+#https://www.webex.com/team-collaboration.html
+#Signup using your preferred email ID. You will receive confirmation email and then fill out basic info. 
+#And you are set!!
+#Signin to WebEx Teams using browser (https://teams.webex.com/signin) or use desktop application 
+
+
 # import libraries
 from credentials import *
 from acitoolkit.acitoolkit import *
@@ -78,10 +85,11 @@ if resp.ok:
 else:
      print("\n{}: {}\n\n{} was not created!\n\n Error: {}".format(resp.status_code, resp.reason, subnet.name, resp.content))
 
+#You have to generate your personal access token using below link
+#https://developer.webex.com/docs/api/getting-started (scroll down a little and you will see it.). Copy the token
 
-
-token = "MjYxZThiZWEtMGI5Ny00MGYyLTkzMWYtMDgwMTlkYzQwM2M3MWJmMjUzNDAtMjRi_PF84_1eb65fdf-9643-417f-9974-ad72cae0e10f"
-room_id = "Y2lzY29zcGFyazovL3VzL1JPT00vYTVjMGM1MjAtNzk4Ny0xMWU4LTgwMzctN2I3NDhmZmFiYTZm"
+#replace "TOKEN" with personal access token you generated using last step.
+#room_Id is already generated and entered below for you.
 
 url = "https://api.ciscospark.com/v1/memberships"
 
