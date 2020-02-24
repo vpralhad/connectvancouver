@@ -5,15 +5,25 @@
 #Signin to WebEx Teams using browser (https://teams.webex.com/signin) or use desktop application 
 
 
-# import libraries
-from credentials import *
-from acitoolkit.acitoolkit import *
+# import required libraries
+from acitoolkit.acitoolkit import Session
+import json
 import requests
 import ciscosparkapi
+
+# ACI sandbox credential details
+URL = 'https://sandboxapicdc.cisco.com'
+LOGIN = 'admin'
+PASSWORD = 'ciscopsdt'
 
 # create session with apic
 session = Session(URL, LOGIN, PASSWORD)
 session.login()
+
+# print list of tenants
+tenant_list = Tenant.get(session)
+for tenant in tenant_list:
+  print(tenant)
 
 #create tenant and vrf
 tenant_name = "INITIALS_Example_Tenant"
