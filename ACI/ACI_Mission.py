@@ -62,10 +62,10 @@ while faults_obj.has_faults(session):
 print("{} Faults were found.\n  {} listed above are critical".format(fault_count["total"], fault_count["critical"]))
 
 #replace "TOKEN" with personal access token you generated using aci_toolkit lab.
-#generate a room_id by adding Room_Id bot to the room
+#generate a room_id by adding Room_Id bot to the room and use that room_id below
 
 token = "TOKEN"
-room_id = "Yroom_id"
+room_id = "room_id"
 
 # MISSION: use the appropriate http method to print the result in Webex Teams room
 spark = ciscosparkapi.CiscoSparkAPI(access_token=token)
