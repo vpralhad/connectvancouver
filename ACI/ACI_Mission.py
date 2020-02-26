@@ -61,6 +61,9 @@ while faults_obj.has_faults(session):
 # Print completion message
 print("{} Faults were found.\n  {} listed above are critical".format(fault_count["total"], fault_count["critical"]))
 
+#You have to generate your personal access token using below link
+#https://developer.webex.com/docs/api/getting-started (scroll down a little and you will see it.). Copy the token
+#Make sure are looged in https://developer.webex.com
 #replace "TOKEN" with personal access token you generated using aci_toolkit lab.
 #generate a room_id by adding Room_Id bot to the room and use that room_id below
 
