@@ -3,10 +3,8 @@
 #You will be using the same skills from the lab you just went through. Look for the word MISSION, your challenge will
 #be replacing the word MISSION with appropriate python keyword. GOOD LUCK!!
 
-import required libraries
-from acitoolkit.acitoolkit import Session
-from acitoolkit import Faults
-import json
+#import required libraries
+from acitoolkit.acitoolkit import *
 import requests
 import ciscosparkapi
 
