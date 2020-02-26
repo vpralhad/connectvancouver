@@ -6,8 +6,7 @@
 
 
 # import required libraries
-from acitoolkit.acitoolkit import Session
-import json
+from acitoolkit.acitoolkit import *
 import requests
 import ciscosparkapi
 
@@ -97,20 +96,13 @@ else:
 
 #You have to generate your personal access token using below link
 #https://developer.webex.com/docs/api/getting-started (scroll down a little and you will see it.). Copy the token
-
+#Make sure are looged in https://developer.webex.com
 #replace "TOKEN" with personal access token you generated using last step.
-#room_Id is already generated and entered below for you.
+#generate a room_id by adding Room_Id bot to the room and use that room_id below
 
-url = "https://api.ciscospark.com/v1/memberships"
+token = 'TOKEN'
+room_id = 'room_id'
 
-payload = "{\r\n  \"roomId\" : \"room_id\",\r\n  \"personEmail\": \"vishalpatil86@rediffmail.com\",\r\n  \"isModerator\": \"false\"\r\n}"
-headers = {
-  'Authorization': 'Bearer TOKEN',
-  'Content-Type': 'application/json'
-}
-
-response = requests.request("POST", url, headers=headers, data = payload)
-print(response.text.encode('utf8'))
 
 def webex_message(item):
     spark = ciscosparkapi.CiscoSparkAPI(access_token=token)
